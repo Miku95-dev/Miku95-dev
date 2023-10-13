@@ -1,0 +1,45 @@
+<?php
+// Khởi tạo mảng
+$fruits = array("Apple", "Banana", "Cherry", "Date", "Fig");
+
+// Truy cập và in ra các phần tử trong mảng
+echo "Fruits: " . $fruits[0] . ", " . $fruits[1] . ", " . $fruits[2] . ", " . $fruits[3] . ", " . $fruits[4] . "<br>";
+
+// Sử dụng vòng lặp foreach để duyệt qua các phần tử trong mảng
+echo "Fruits: ";
+foreach ($fruits as $fruit) {
+    echo $fruit . ", ";
+}
+?>
+
+
+<?php
+// Khai báo một mảng
+$fruits = array("apple", "banana", "cherry");
+
+// Hoặc có thể sử dụng cú pháp viết gọn
+$colors = ["red", "green", "blue"];
+
+// Truy cập và in ra các phần tử trong mảng
+echo "Fruits: " . $fruits[0] . ", " . $fruits[1] . ", " . $fruits[2] . "<br>";
+echo "Colors: " . $colors[0] . ", " . $colors[1] . ", " . $colors[2] . "<br>";
+
+// Động dạng mảng
+$person = [
+    "name" => "John",
+    "age" => 30,
+    "country" => "USA"
+];
+
+// Truy cập và in ra các phần tử trong mảng động dạng
+echo "Name: " . $person["name"] . "<br>";
+echo "Age: " . $person["age"] . "<br>";
+echo "Country: " . $person["country"] . "<br>";
+
+// Lặp qua mảng sử dụng vòng lặp foreach
+echo "Fruits: ";
+foreach ($fruits as $fruit) {
+    echo $fruit . ", ";
+}
+
+?>
