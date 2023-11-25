@@ -1,5 +1,5 @@
 <?php
-// Khai báo một mảng
+// Khai báo một mảng 1
 $fruits = array("apple", "banana", "cherry");
 
 // Hoặc có thể sử dụng cú pháp viết gọn
@@ -9,7 +9,7 @@ $colors = ["red", "green", "blue"];
 echo "Fruits: " . $fruits[0] . ", " . $fruits[1] . ", " . $fruits[2] . "<br>";
 echo "Colors: " . $colors[0] . ", " . $colors[1] . ", " . $colors[2] . "<br>";
 
-// Động dạng mảng
+// Động dạng mảng 2
 $person = [
     "name" => "John",
     "age" => 30,
