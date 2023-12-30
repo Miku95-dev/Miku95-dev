@@ -1,4 +1,5 @@
 <?php
+
 // Khởi tạo mảng
 $fruits = array("Apple", "Banana", "Cherry", "Date", "Fig");
 
