@@ -28,4 +28,37 @@ foreach ($fruits as $fruit) {
 }
 
 ?>
+<?php
+// Khai báo mảng 2D (ma trận)
+$matrix = array(
+    array(1, 2, 3),
+    array(4, 5, 6),
+    array(7, 8, 9)
+);
 
+// In ma trận
+echo "Matrix:\n";
+for ($i = 0; $i < count($matrix); $i++) {
+    for ($j = 0; $j < count($matrix[$i]); $j++) {
+        echo $matrix[$i][$j] . " ";
+    }
+    echo "\n";
+}
+
+// Truy cập phần tử của ma trận
+echo "Element at (2, 3): " . $matrix[1][2] . "\n";
+
+// Thay đổi giá trị của phần tử
+$matrix[1][2] = 10;
+
+// In ma trận sau khi thay đổi giá trị
+echo "Updated Matrix:\n";
+for ($i = 0; $i < count($matrix); $i++) {
+    for ($j = 0; $j < count($matrix[$i]); $j++) {
+        echo $matrix[$i][$j] . " ";
+    }
+    echo "\n";
+}
+?>
+
+//
