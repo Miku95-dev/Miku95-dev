@@ -51,6 +51,42 @@ def main():
 if __name__ == "__main__":
     main()
 
+// bai 2
+Trước tiên, bạn cần cài đặt thư viện matplotlib bằng cách sử dụng lệnh sau:
 
+
+pip install matplotlib
+Sau đó, bạn có thể sử dụng đoạn mã sau để vẽ một hình chữ nhật đại diện cho một mảng:
+
+python
+import matplotlib.pyplot as plt
+
+def draw_array(array):
+    rows = len(array)
+    cols = len(array[0])
+
+    plt.figure()
+    current_cmap = plt.get_cmap()
+
+    plt.imshow(array, cmap=current_cmap, vmin=0, vmax=1)
+
+    plt.xticks(range(cols), [str(i) for i in range(cols)])
+    plt.yticks(range(rows), [str(i) for i in range(rows)])
+
+    plt.title("Box Array")
+
+    plt.show()
+
+# Example array
+my_array = [
+    [1, 0, 1],
+    [0, 1, 0],
+    [1, 1, 0]
+]
+
+# Draw the array
+draw_array(my_array)
+
+// bai 3
 
 
