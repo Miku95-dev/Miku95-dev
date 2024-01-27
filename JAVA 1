@@ -40,6 +40,10 @@ Cuối cùng, chúng ta cần tạo một tệp web.xml để ánh xạ URL đ�
     </servlet-mapping>
 </web-app>
 
+Trong ví dụ này, Servlet được ánh xạ với URL "/hello". Khi truy cập URL này trên trình duyệt, Servlet sẽ được gọi và trang HTML sẽ được gửi về trình duyệt, hiển thị tin nhắn "Hello, world!".
+
+Đây chỉ là một ví dụ cơ bản, bạn có thể mở rộng và tùy chỉnh nó theo nhu cầu cụ thể của bạn.
+
 // BAI 2
 
 
