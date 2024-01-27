@@ -87,6 +87,7 @@ my_array = [
 # Draw the array
 draw_array(my_array)
 
+
 // bai 3
 
 
