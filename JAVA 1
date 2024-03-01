@@ -45,9 +45,62 @@ Trong ví dụ này, Servlet được ánh xạ với URL "/hello". Khi truy c�
 Đây chỉ là một ví dụ cơ bản, bạn có thể mở rộng và tùy chỉnh nó theo nhu cầu cụ thể của bạn.
 
 // BAI 2
+public class ArrayExample {
+    public static void main(String[] args) {
+        // Khai báo và khởi tạo một mảng nguyên
+        int[] myArray = {1, 2, 3, 4, 5};
+
+        // In các phần tử của mảng
+        System.out.print("Array elements: ");
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.print(myArray[i] + " ");
+        }
+        System.out.println();
+
+        // Truy cập phần tử của mảng
+        System.out.println("Element at index 0: " + myArray[0]);
+        System.out.println("Element at index 2: " + myArray[2]);
+
+        // Thay đổi giá trị của phần tử
+        myArray[1] = 10;
+        System.out.print("Updated array: ");
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.print(myArray[i] + " ");
+        }
+        System.out.println();
+
+        // Duyệt qua các phần tử của mảng sử dụng vòng lặp for-each
+        System.out.print("Array elements: ");
+        for (int item : myArray) {
+            System.out.print(item + " ");
+        }
+        System.out.println();
+
+        // Tính tổng các phần tử của mảng
+        int sum = 0;
+        for (int item : myArray) {
+            sum += item;
+        }
+        System.out.println("Sum of elements: " + sum);
+
+        // Tìm giá trị lớn nhất và nhỏ nhất trong mảng
+        int max = myArray[0];
+        int min = myArray[0];
+        for (int i = 1; i < myArray.length; i++) {
+            if (myArray[i] > max) {
+                max = myArray[i];
+            }
+            if (myArray[i] < min) {
+                min = myArray[i];
+            }
+        }
+        System.out.println("Max value: " + max);
+        System.out.println("Min value: " + min);
+    }
+}
 
 
-
+// BAI 3
 
 
 
