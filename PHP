@@ -62,3 +62,45 @@ for ($i = 0; $i < count($matrix); $i++) {
 ?>
 
 //
+
+
+
+//bai2
+
+<?php
+// Khai báo mảng
+$myArray = array(1, 2, 3, 4, 5);
+
+// In các phần tử của mảng
+echo "Array elements: ";
+foreach ($myArray as $element) {
+    echo $element . " ";
+}
+echo "<br>";
+
+// Truy cập phần tử của mảng
+echo "Element at index 0: " . $myArray[0] . "<br>";
+echo "Element at index 2: " . $myArray[2] . "<br>";
+
+// Thay đổi giá trị của phần tử
+$myArray[1] = 10;
+echo "Updated array: ";
+foreach ($myArray as $element) {
+    echo $element . " ";
+}
+echo "<br>";
+
+// Duyệt qua các phần tử của mảng và tính tổng
+$sum = 0;
+foreach ($myArray as $element) {
+    $sum += $element;
+}
+echo "Sum of elements: " . $sum . "<br>";
+
+// Tìm giá trị lớn nhất và nhỏ nhất trong mảng
+$maxValue = max($myArray);
+$minValue = min($myArray);
+echo "Max value: " . $maxValue . "<br>";
+echo "Min value: " . $minValue . "<br>";
+?>
+
