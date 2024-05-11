@@ -90,4 +90,17 @@ draw_array(my_array)
 
 // bai 3
 
+# Generating a sequence of numbers
+start = 1  # Starting number
+end = 10   # Ending number (inclusive)
+step = 1   # Step size
 
+# Using a for loop to iterate over the sequence
+for num in range(start, end + 1, step):
+    print(num)
+
+
+
+
+
+// bai 4
