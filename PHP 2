@@ -44,3 +44,33 @@ foreach ($fruits as $fruit) {
 }
 
 ?>
+
+
+//bai 2
+
+<?php
+// Create an array of numbers
+$start = 1;  // Starting number
+$end = 10;   // Ending number (inclusive)
+$step = 1;   // Step size
+
+// Initialize the array
+$numbers = array();
+
+// Populate the array with the sequence of numbers
+for ($i = $start; $i <= $end; $i += $step) {
+    $numbers[] = $i;
+}
+
+// Print the array
+foreach ($numbers as $number) {
+    echo $number . " ";
+}
+?>
+
+
+
+
+
+
+
