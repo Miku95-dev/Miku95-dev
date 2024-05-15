@@ -103,4 +103,74 @@ $minValue = min($myArray);
 echo "Max value: " . $maxValue . "<br>";
 echo "Min value: " . $minValue . "<br>";
 ?>
+//bài 2
+
+
+<?php
+// Integer
+$integerVar = 42;
+echo "Integer: " . $integerVar . "<br>";
+
+// Float
+$floatVar = 3.14;
+echo "Float: " . $floatVar . "<br>";
+
+// String
+$stringVar = "Hello, PHP!";
+echo "String: " . $stringVar . "<br>";
+
+// Boolean
+$boolVar = true;
+echo "Boolean: " . ($boolVar ? 'true' : 'false') . "<br>";
+
+// Array
+$arrayVar = array(1, 2, 3, 4, 5);
+echo "Array: ";
+foreach ($arrayVar as $value) {
+    echo $value . " ";
+}
+echo "<br>";
+
+// Associative Array
+$assocArrayVar = array("first" => "John", "last" => "Doe");
+echo "Associative Array: ";
+foreach ($assocArrayVar as $key => $value) {
+    echo "$key => $value, ";
+}
+echo "<br>";
+
+// Null
+$nullVar = null;
+echo "Null: " . var_export($nullVar, true) . "<br>";
+
+// Object
+class SampleClass {
+    public $property = "I'm an object property!";
+    public function showProperty() {
+        return $this->property;
+    }
+}
+
+$objectVar = new SampleClass();
+echo "Object: " . $objectVar->showProperty() . "<br>";
+
+// Resource (for example, a database connection, file handle, etc.)
+// Not demonstrating here because it's context-dependent
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
