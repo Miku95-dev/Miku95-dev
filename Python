@@ -104,3 +104,79 @@ for num in range(start, end + 1, step):
 
 
 // bai 4
+
+# Simple To-Do List Application
+
+# Initialize an empty to-do list
+todo_list = []
+
+def show_menu():
+    print("\nSimple To-Do List Application")
+    print("1. View To-Do List")
+    print("2. Add a Task")
+    print("3. Remove a Task")
+    print("4. Exit")
+
+def view_tasks():
+    if not todo_list:
+        print("\nYour to-do list is empty.")
+    else:
+        print("\nYour To-Do List:")
+        for index, task in enumerate(todo_list, start=1):
+            print(f"{index}. {task}")
+
+def add_task():
+    task = input("\nEnter the task you want to add: ")
+    todo_list.append(task)
+    print(f"Task '{task}' added to the to-do list.")
+
+def remove_task():
+    view_tasks()
+    if todo_list:
+        try:
+            task_number = int(input("\nEnter the number of the task to remove: "))
+            if 1 <= task_number <= len(todo_list):
+                removed_task = todo_list.pop(task_number - 1)
+                print(f"Task '{removed_task}' removed from the to-do list.")
+            else:
+                print("Invalid task number.")
+        except ValueError:
+            print("Please enter a valid number.")
+
+def main():
+    while True:
+        show_menu()
+        choice = input("\nEnter your choice (1-4): ")
+        
+        if choice == "1":
+            view_tasks()
+        elif choice == "2":
+            add_task()
+        elif choice == "3":
+            remove_task()
+        elif choice == "4":
+            print("Exiting the application. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 4.")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+//bài5
+
+
+
+
+
+
+
+
+
+
+
