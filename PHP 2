@@ -68,7 +68,29 @@ foreach ($numbers as $number) {
 }
 ?>
 
+//bài3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Image Example</title>
+</head>
+<body>
 
+<?php
+// Define the image path
+$imagePath = "path/to/your/image.jpg";  // Update this path with your actual image path
+
+// Display the image
+echo "<img src='$imagePath' alt='Image Description' style='max-width:100%; height:auto;'>";
+?>
+
+</body>
+</html>
+
+
+//bài4
 
 
 
