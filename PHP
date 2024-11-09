@@ -183,10 +183,80 @@ public class ArrayMergeExample {
     }
 }
 //bài4
+<?php
+// Start the session to manage user login
+session_start();
+
+// Define users in an array (for demo purposes; in a real app, you'd use a database)
+$users = [
+    "admin" => "admin123",
+    "user" => "user123"
+];
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+
+    // Authenticate the user
+    if (array_key_exists($username, $users) && $users[$username] === $password) {
+        // Store the username in session
+        $_SESSION['username'] = $username;
+        $message = "Login successful! Welcome, $username.";
+    } else {
+        $message = "Invalid username or password.";
+    }
+} elseif (isset($_GET['action']) && $_GET['action'] === 'logout') {
+    // Logout the user
+    session_destroy();
+    $message = "You have been logged out.";
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple PHP Server</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: auto; }
+        .message { margin: 10px 0; padding: 10px; background-color: #f9f9f9; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+<h2>Simple PHP Server Example</h2>
+
+<?php if (isset($message)) : ?>
+    <div class="message"><?php echo htmlspecialchars($message); ?></div>
+<?php endif; ?>
+
+<?php if (!isset($_SESSION['username'])) : ?>
+    <!-- Login Form -->
+    <form action="" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+<?php else : ?>
+    <!-- Display if user is logged in -->
+    <p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
+    <a href="?action=logout">Logout</a>
+<?php endif; ?>
+
+</body>
+</html>
 
 
 
 
+//bài5
 
 
 
