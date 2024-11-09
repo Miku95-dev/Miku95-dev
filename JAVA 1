@@ -170,7 +170,54 @@ public class ArrayMergeExample {
     }
 }
 
+//bai5
 
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class LoginSystem {
+    // A HashMap to store usernames and passwords
+    private static HashMap<String, String> users = new HashMap<>();
+
+    // Initialize with some dummy data
+    static {
+        users.put("admin", "admin123");
+        users.put("user", "user123");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Login System!");
+
+        // Prompt user for login credentials
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        System.out.print("Enter password: ");
+        String password = scanner.nextLine();
+
+        // Check if login is successful
+        if (authenticate(username, password)) {
+            System.out.println("\nLogin successful! Welcome, " + username + "!");
+        } else {
+            System.out.println("\nInvalid username or password.");
+        }
+
+        scanner.close();
+    }
+
+    // Method to authenticate the user
+    private static boolean authenticate(String username, String password) {
+        // Check if the username exists and the password matches
+        return users.containsKey(username) && users.get(username).equals(password);
+    }
+}
+
+
+
+
+
+//bai6
 
 
 
