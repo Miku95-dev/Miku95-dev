@@ -254,10 +254,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </html>
 
 
-
-
 //bài5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Message Example</title>
+</head>
+<body>
+    <h2>Enter Your Message</h2>
+    <form method="post" action="">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve the user's input
+        $name = htmlspecialchars($_POST["name"]);
+        $message = htmlspecialchars($_POST["message"]);
+
+        // Display the message
+        echo "<h3>Message Received</h3>";
+        echo "<p><strong>From:</strong> $name</p>";
+        echo "<p><strong>Message:</strong> $message</p>";
+    }
+    ?>
+</body>
+</html>
+
+
+
+//bài6
+
+
+
+//bài7
 
 
 
