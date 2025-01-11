@@ -155,8 +155,45 @@ $page = $_GET['page'] ?? 'home';
 
 
 //bài5
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Message Example</title>
+</head>
+<body>
+    <h2>Message Form</h2>
+    <form method="post" action="">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="message">Enter your message:</label>
+        <input type="text" id="message" name="message" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <?php
+    // Check if the form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get the input values
+        $name = htmlspecialchars($_POST["name"]);
+        $message = htmlspecialchars($_POST["message"]);
+
+        // Display the message
+        echo "<h3>Message from $name:</h3>";
+        echo "<p>$message</p>";
+    }
+    ?>
+</body>
+</html>
+
+//bài6
 
 
+//bài7
+
+
+//bài8
 
 
 
