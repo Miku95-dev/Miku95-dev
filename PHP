@@ -289,15 +289,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 </html>
 
-
-
 //bài6
+
+<?php
+session_start(); // Bắt đầu phiên làm việc
+
+$correct_username = "admin";
+$correct_password = "1234";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    if ($username === $correct_username && $password === $correct_password) {
+        $_SESSION["loggedin"] = true;
+        echo "<h3>Đăng nhập thành công! Xin chào, $username.</h3>";
+    } else {
+        echo "<h3>Sai tên đăng nhập hoặc mật khẩu.</h3>";
+    }
+}
+?>
+
+<form method="post">
+    <label>Tên đăng nhập:</label>
+    <input type="text" name="username" required><br>
+    <label>Mật khẩu:</label>
+    <input type="password" name="password" required><br>
+    <button type="submit">Đăng nhập</button>
+</form>
 
 
 
 //bài7
 
 
+
+
+//bài8
 
 
 
