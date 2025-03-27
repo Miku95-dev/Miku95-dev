@@ -8,7 +8,7 @@
 -Exiting the application
 - This example provides a secure
 - ....
-- 
+- ....
 
 <!---
 Miku95-dev/Miku95-dev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
