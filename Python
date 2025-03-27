@@ -203,8 +203,17 @@ print(f"Hello, {name}! You are {age} years old.")
 
 //bài7
 
+# Nhập danh sách số từ người dùng, cách nhau bởi dấu phẩy
+numbers = list(map(int, input("Nhập các số, cách nhau bởi dấu phẩy: ").split(',')))
 
+# Tính toán
+total = sum(numbers)
+average = total / len(numbers)
 
+# Hiển thị kết quả
+print(f"Tổng: {total}, Trung bình: {average:.2f}")
+
+//bài8
 
 
 
