@@ -189,6 +189,30 @@ $page = $_GET['page'] ?? 'home';
 
 //bài6
 
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Nhận dữ liệu từ form
+    $input = $_POST['numbers'];
+    
+    // Chuyển chuỗi thành mảng số nguyên
+    $numbers = array_map('intval', explode(',', $input));
+
+    // Tính tổng và trung bình
+    $sum = array_sum($numbers);
+    $average = $sum / count($numbers);
+
+    echo "<h3>Kết Quả:</h3>";
+    echo "Mảng: " . implode(", ", $numbers) . "<br>";
+    echo "Tổng: $sum <br>";
+    echo "Trung bình: $average";
+}
+?>
+
+<form method="post">
+    <label
+
+
+
 
 //bài7
 
