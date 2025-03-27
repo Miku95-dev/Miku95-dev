@@ -246,17 +246,42 @@ public class UserInputExample {
 }
 
 
-
-
-
 //bai7
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Nhập số lượng phần tử
+        System.out.print("Nhập số lượng phần tử: ");
+        int n = scanner.nextInt();
+        int[] numbers = new int[n];
+
+        // Nhập các số vào mảng
+        System.out.println("Nhập các số:");
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+            sum += numbers[i];
+        }
+
+        // Tính toán và hiển thị kết quả
+        double average = (double) sum / n;
+        System.out.println("Tổng: " + sum);
+        System.out.println("Trung bình: " + average);
+
+        scanner.close();
+    }
+}
 
 
 
 //bai8
 
 
-
+//bai9
 
 
 
